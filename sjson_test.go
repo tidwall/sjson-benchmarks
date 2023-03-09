@@ -1,4 +1,4 @@
-package sjson_test
+package main
 
 import (
 	"bytes"
