@@ -6,14 +6,18 @@ Benchmarks of SJSON alongside [encoding/json](https://golang.org/pkg/encoding/js
 and [Gabs](https://github.com/Jeffail/gabs)
 
 ```
-Benchmark_SJSON-8                  	 3000000	       805 ns/op	    1077 B/op	       3 allocs/op
-Benchmark_SJSON_ReplaceInPlace-8   	 3000000	       449 ns/op	       0 B/op	       0 allocs/op
-Benchmark_JSON_Map-8               	  300000	     21236 ns/op	    6392 B/op	     150 allocs/op
-Benchmark_JSON_Struct-8            	  300000	     14691 ns/op	    1789 B/op	      24 allocs/op
-Benchmark_Gabs-8                   	  300000	     21311 ns/op	    6752 B/op	     150 allocs/op
-Benchmark_FFJSON-8                 	  300000	     17673 ns/op	    3589 B/op	      47 allocs/op
-Benchmark_EasyJSON-8               	 1500000	      3119 ns/op	    1061 B/op	      13 allocs/op
+Benchmark_SJSON-8                  	3000000	    415.2 ns/op	   1005 B/op	      2 allocs/op
+Benchmark_SJSON_ReplaceInPlace-8   13991337	    256.9 ns/op	      0 B/op	      0 allocs/op
+Benchmark_Encoding_JSON_Map-8      	 409584	     8196 ns/op	   5183 B/op	    124 allocs/op
+Benchmark_Encoding_JSON_Struct-8   	 760608	     4806 ns/op	   1061 B/op	     25 allocs/op
+Benchmark_Gabs-8                   	 441423	     8095 ns/op	   5557 B/op	    124 allocs/op
+Benchmark_FFJSON-8                 	 458751	     7817 ns/op	   3486 B/op	     50 allocs/op
+Benchmark_EasyJSON-8               	2360268	     1498 ns/op	   1061 B/op	     13 allocs/op
 ```
+
+*These benchmarks were run on a MacBook Pro 14" 8C M1 Pro using Go 1.20.*
+
+Last run: March 09, 2023
 
 JSON document used:
 
@@ -44,10 +48,6 @@ JSON document used:
   }
 }    
 ```
-
-*These benchmarks were run on a MacBook Pro 15" 2.8 GHz Intel Core i7 using Go 1.8.*
-
-Last run: May 10, 2017
 
 ## Usage
 
